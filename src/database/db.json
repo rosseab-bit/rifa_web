@@ -1,0 +1,19 @@
+{"n1":{
+"number":1,
+"status": "enabled"
+},
+"n2":{
+"number":2,
+"status": "enabled"
+}
+}
+
+
+host: b9mx97ajyteutenvvryf-mysql.services.clever-cloud.com
+dbname: b9mx97ajyteutenvvryf
+user: uztk9nvgdnbfuepr
+pass: hQxTFMwxO1kLRyrfieX5
+port: 3306
+
+mysql -h b9mx97ajyteutenvvryf-mysql.services.clever-cloud.com -P 3306 -u uztk9nvgdnbfuepr -p b9mx97ajyteutenvvryf
+

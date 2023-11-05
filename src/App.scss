@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.containerCardNumbers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .buttonNumber {
+    margin-bottom: 10px;
+  }
+}
+
+
