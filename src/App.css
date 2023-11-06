@@ -10,23 +10,45 @@
   flex-wrap: wrap;
   justify-content: space-around;
   overflow: scroll;
-  height: 70% !important;
+  height: 75% !important;
+  margin-bottom: 10px;
 }
 .buttonNumber {
     margin-bottom: 5px !important;
     margin-left: 5px !important;
   }
+.buttonBlock {
+  margin-bottom: 5px !important;
+  margin-left: 5px !important;
+}
+
+.buttonPending {
+  background-color: #f3bb29 !important;
+  margin-bottom: 5px !important;
+  margin-left: 5px !important;
+}
+
+.iconButtonImage {
+  width: 30px;
+  height: 30px;
+}
+.iconButtonImageFooter {
+  width: 20px;
+  height: 20px;
+}
+
+
 .backgroundHead {
   position: relative;
+  display: flex;
   height: 20% !important;
   background-size: cover;
   background-image: url(./static/img/bannerBoca.png);
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 10px;
+  align-items: center; 
 }
 .footerWebContainer {
-  height: 15%;
-  background-color:  #3355aa ;
-  bottom: 0;
+  background-color:  #103f79 !important;
 }

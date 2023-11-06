@@ -18,7 +18,11 @@ def getData(requests):
 @csrf_exempt
 def putData(requests):
     if requests.method == "POST":
-        print (json.loads(requests.body)["data"])
+        number_update = json.loads(requests.body)['number_selected']
+        print(number_update)
+        Rifa.objects.filter(number=number_update).update(status='pending')
+        print('number update')
+        return JsonResponse({"data": "success"})
 
 
 def updateData(requests):
