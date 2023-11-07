@@ -1,9 +1,28 @@
 import '../App.css';
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import Grid from "@mui/material/Grid";
-
+import axios from "axios";
 
 const HeadWeb = () => {
+  const [ dataConfig, setDataConfig ] = useState();
+  const [ renderComponent, setRenderComponent ] = useState(0);
+  const getConfig = async () => {
+    try {
+      const url = "http://192.168.0.161:8000/getconfig";
+      let response = await axios.get(url);
+      let configData = response.data.data;
+      setDataConfig(configData);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    getConfig();
+  },[]);
+  useEffect(() => {
+    setRenderComponent(renderComponent + 1);
+  },[dataConfig]);
   return (
     <>
     <header className="backgroundHead">
@@ -24,8 +43,8 @@ const HeadWeb = () => {
               }}
             >
               <div style={{display:'flex', flexDirection: 'column', alignItems: 'center', jstifyContent: 'center'}}>
-                <p style={{ color: "#FFF", marginLeft: "5px", fontSize: 14, marginTop: 30 }}>
-                 Ayudanos a viajar a Rio 
+		<p style={{ color: "#FFF", marginLeft: "5px", fontSize: 14, marginTop: 30 }}>
+		  {(dataConfig[0].abaout? dataConfig[0].abaout: `Loading...`)}
                 </p>
               </div>
             </div>
@@ -33,13 +52,15 @@ const HeadWeb = () => {
 
           <Grid item xs={6} style={{backgroundColor: 'rgba(0, 99, 255, 0.6)', borderRadius: 10}}>
 	    <div>
-                <p style={{ color: "#FFF", marginLeft: "5px", fontSize: 14, marginLeft: 50 }}>
-                1x $1000 
+	      {
+	      dataConfig[0]?.awards?.split(',').map((item, key) => (
+                <p style={{ color: "#FFF", marginLeft: "5px", fontSize: 10, marginLeft: 50 }}>
+		  {item} 
                 </p>
-                <p style={{ color: "#FFF", marginLeft: "5px", fontSize: 14, marginLeft: 50 }}>
-                2x $1500 
-                </p>
-	    </div>
+	      ))
+	      }
+	      
+	      </div>
           </Grid>
         </Grid>
 
