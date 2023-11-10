@@ -4,6 +4,8 @@ import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import iconBoca from "../static/img/iconBoca.png";
+import BlockIcon from '@mui/icons-material/Block';
+
 
 const FooterWeb = () => {
   const Item = styled(Paper)(({ theme }) => ({
@@ -38,7 +40,7 @@ const FooterWeb = () => {
                 style={{
                   height: "20px",
                   width: "20px",
-                  backgroundColor: "#f3bb29",
+                  backgroundColor: "#BCBCBC",
                 }}
               ></div>
               <div>
@@ -57,7 +59,7 @@ const FooterWeb = () => {
                 marginTop: "0px !important",
               }}
             >
-              <img src={iconBoca} className="iconButtonImageFooter" />
+		<BlockIcon className="iconButtonImageFooter" style={{color: '#FFF'}}/>
               <div>
                 <p style={{ color: "#FFF", marginLeft: "5px", fontSize: 14 }}>
                   Numero Vendido

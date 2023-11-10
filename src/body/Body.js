@@ -3,6 +3,8 @@ import axios from "axios";
 import { useContext, useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import iconBoca from "../static/img/iconBoca.png";
+import iconNumLock from "../static/img/numLock.png";
+import BlockIcon from '@mui/icons-material/Block';
 const BodyWeb = () => {
   const [dataNumber, setDataNumber] = useState();
   const [updateComponent, setUpdateComponent] = useState(0);
@@ -64,7 +66,7 @@ const BodyWeb = () => {
                 variant="contained"
                 onClick={() => numberSelected(item)}
               >
-                <img src={iconBoca} className="iconButtonImage" />
+		<BlockIcon className="iconButtonImage"/>
               </Button>
             )}
             {item?.status === "pending" && (
