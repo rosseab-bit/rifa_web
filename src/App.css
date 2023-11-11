@@ -43,7 +43,8 @@
   display: flex;
   height: 20% !important;
   background-size: cover;
-  background-image: url(./static/img/bannerBoca.jpg);
+  /*background-image: url(./static/img/bannerBoca.jpg);*/
+  background-color: #103f79;
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 10px;

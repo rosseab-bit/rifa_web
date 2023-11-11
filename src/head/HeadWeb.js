@@ -32,7 +32,7 @@ const HeadWeb = () => {
         <LinearProgress />
       </Box>
     );
-}
+  }
 
   return (
     <>
@@ -41,8 +41,8 @@ const HeadWeb = () => {
           <Grid
             xs={6}
             style={{
-              backgroundColor: "rgba(0, 99, 255, 0.6)",
-              borderRadius: 10,
+              backgroundColor: "rgba(0, 99, 255, 0.3)",
+              borderRadius: 5,
             }}
           >
             <div
@@ -67,10 +67,13 @@ const HeadWeb = () => {
                     color: "#FFF",
                     marginLeft: "5px",
                     fontSize: 14,
-                    marginTop: 30,
+                    marginTop: 20,
+                    textAlign: "center",
                   }}
                 >
-		  {dataConfig?.length > 0 ? dataConfig[0]?.abaout : `Loading...`}
+                  {dataConfig?.length > 0
+                    ? dataConfig[0]?.abaout
+                    : `Loading...`}
                 </p>
               </div>
             </div>
@@ -80,25 +83,26 @@ const HeadWeb = () => {
             item
             xs={6}
             style={{
-              backgroundColor: "rgba(0, 99, 255, 0.6)",
-              borderRadius: 10,
+              backgroundColor: "rgba(0, 99, 255, 0.3)",
+              borderRadius: 5,
             }}
-	>
-	    {dataConfig &&
-            <div>
-              {dataConfig[0]?.awards?.split(",").map((item, key) => (
-                <p
-                  style={{
-                    color: "#FFF",
-                    marginLeft: "5px",
-                    fontSize: 10,
-                    marginLeft: 50,
-                  }}
-                >
-                  {item}
-                </p>
-              ))}
-            </div>}
+          >
+            {dataConfig && (
+              <div>
+                {dataConfig[0]?.awards?.split(",").map((item, key) => (
+                  <p
+                    style={{
+                      color: "#FFF",
+                      marginLeft: "5px",
+                      fontSize: 10,
+                      marginLeft: 50,
+                    }}
+                  >
+                    {item}
+                  </p>
+                ))}
+              </div>
+            )}
           </Grid>
         </Grid>
       </header>
