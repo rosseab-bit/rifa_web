@@ -1,10 +1,12 @@
-import "../App.css";
+import "./BodyStyle.css";
 import axios from "axios";
 import { useContext, useState, useEffect } from "react";
+import ImgXRed from "../static/img/x_red.png";
 import Button from "@mui/material/Button";
 import iconBoca from "../static/img/iconBoca.png";
 import iconNumLock from "../static/img/numLock.png";
 import BlockIcon from '@mui/icons-material/Block';
+import ClearIcon from '@mui/icons-material/Clear';
 const BodyWeb = () => {
   const [dataNumber, setDataNumber] = useState();
   const [updateComponent, setUpdateComponent] = useState(0);
@@ -48,7 +50,7 @@ const BodyWeb = () => {
   }, []);
   return (
     <>
-      <div className="containerCardNumbers">
+      <div className="contenedor-numbers">
         {dataNumber?.map((item, key) => (
           <>
             {item.status === "available" && (
@@ -56,8 +58,10 @@ const BodyWeb = () => {
                 className="buttonBlock"
                 variant="contained"
                 onClick={() => numberSelected(item)}
-              >
+	    >
+		<p>
                 {item.number}
+		</p>
               </Button>
             )}
             {item?.status === "block" && (
@@ -66,7 +70,7 @@ const BodyWeb = () => {
                 variant="contained"
                 onClick={() => numberSelected(item)}
               >
-		<BlockIcon className="iconButtonImage"/>
+		<ClearIcon className="iconButtonImage"/>
               </Button>
             )}
             {item?.status === "pending" && (
@@ -74,8 +78,10 @@ const BodyWeb = () => {
                 className="buttonPending"
                 variant="contained"
                 onClick={() => numberSelected(item)}
-              >
+	    >
+		<p>
                 {item.number}
+		</p>
               </Button>
             )}
           </>

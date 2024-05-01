@@ -1,55 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 .App {
-  height: 100%;
-  position:absolute;
-  flex-direction: column;
+  position: relative;
+  width: 90%;
+  max-width: 1250px;
+  height: 100vh;
+  margin: 0 auto;
+}
+:root{
+  --fontPrimary: "Raleway", sans-serif;
+  --fontWeightPrimary: 500;
+  --borderRules: 1px solid
 }
 
-.containerCardNumbers {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  overflow: scroll;
-  height: 75% !important;
-  margin-bottom: 10px;
-}
-.buttonNumber {
-    margin-bottom: 5px !important;
-    margin-left: 5px !important;
-  }
-.buttonBlock {
-  margin-bottom: 5px !important;
-  margin-left: 5px !important;
-}
-
-.buttonPending {
-  background-color: #BCBCBC!important;
-  margin-bottom: 5px !important;
-  margin-left: 5px !important;
-}
-
-.iconButtonImage {
-  width: 30px;
-  height: 30px;
-}
-.iconButtonImageFooter {
-  width: 20px;
-  height: 20px;
-}
 
 
 .backgroundHead {
-  position: relative;
   display: flex;
-  height: 20% !important;
-  background-size: cover;
-  /*background-image: url(./static/img/bannerBoca.jpg);*/
-  background-color: #103f79;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 10px;
-  align-items: center; 
+  height: 20vh !important;
 }
-.footerWebContainer {
-  background-color:  #103f79 !important;
-}
+

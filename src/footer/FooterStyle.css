@@ -1,0 +1,22 @@
+.footerWebContainer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color:  #103f79 !important;
+  height: 12vh;
+  bottom: 0;
+
+}
+.iconButtonImageFooter {
+  width: 20px;
+  height: 20px;
+}
+.col1-footer {
+  flex-basis: 50%;
+  border: var(--borderRules) red;
+}
+.col2-footer{
+  flex-basis: 50%;
+  border: var(--borderRules) red;
+}

@@ -1,0 +1,40 @@
+.contenedor-numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: scroll;
+  height: 70vh;
+  width: 100%;
+  margin-bottom: 10px;
+  gap:5px;
+}
+.buttonNumber {
+  height: 100px;
+  width: 100px;
+  background-color: #fff !important;
+  border: var(--borderRules) #000 !important;
+}
+.buttonBlock {
+  height: 100px;
+  width: 100px;
+  background-color: #fff !important;
+  border: var(--borderRules) #000 !important;
+}
+.buttonBlock p{
+  color: #000;
+}
+.buttonPending {
+  height: 100px;
+  width: 100px;
+  background-color: #bcbcbc !important;
+  border: var(--borderRules) #000 !important;
+}
+
+.iconButtonImage {
+  width: 50px;
+  font-size: 85px !important;
+  height: 30px;
+  color: red !important;
+  color: #000000;
+}

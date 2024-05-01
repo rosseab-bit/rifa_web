@@ -1,11 +1,11 @@
+import "./FooterStyle.css";
 import "../App.css";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import iconBoca from "../static/img/iconBoca.png";
-import BlockIcon from '@mui/icons-material/Block';
-
+import BlockIcon from "@mui/icons-material/Block";
 
 const FooterWeb = () => {
   const Item = styled(Paper)(({ theme }) => ({
@@ -17,17 +17,10 @@ const FooterWeb = () => {
   }));
   return (
     <>
-      <Box
-        sx={{ width: "100%", height: "15%" }}
-        className="footerWebContainer"
-      >
-        <Grid
-          container
-          rowSpacing={1}
-          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        <div
           className="footerWebContainer"
         >
-          <Grid xs={6} className="footerWebContainer">
+          <div className="col1-footer">
             <div
               style={{
                 display: "flex",
@@ -59,20 +52,22 @@ const FooterWeb = () => {
                 marginTop: "0px !important",
               }}
             >
-		<BlockIcon className="iconButtonImageFooter" style={{color: '#FFF'}}/>
+              <BlockIcon
+                className="iconButtonImageFooter"
+                style={{ color: "#FFF" }}
+              />
               <div>
                 <p style={{ color: "#FFF", marginLeft: "5px", fontSize: 14 }}>
                   Numero Vendido
                 </p>
               </div>
             </div>
-	  </Grid>
+          </div>
 
-          <Grid item xs={6} className="footerWebContainer">
+          <div className="col2-footer">
             <div>2</div>
-          </Grid>
-        </Grid>
-      </Box>
+          </div>
+        </div>
     </>
   );
 };
